@@ -5,5 +5,5 @@ status = 200
 
 [build]
   base = "frontend"
-  publish = "frontend/build"  # Adjust this path based on your frontend build output
+  publish = "build"  # Adjust this path based on your frontend build output
   pretty_urls = false
