@@ -1,0 +1,35 @@
+.home-headline{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+label{
+    font-size: 16px;
+    color: black;
+}
+
+textarea{
+    height: 120px !important;
+}
+
+.form-alert{
+    color:red;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+}
+
+.alert-text{
+    margin-top: 5px;
+}
+
+.success{
+    color: green;
+    font-size: 16px;
+    font-weight: 500;
+}
+.fail{
+    color: red;
+    font-size: 16px;
+    font-weight: 500;
+}
