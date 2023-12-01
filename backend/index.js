@@ -24,7 +24,7 @@ db.once("open", () => {
 
 
 const corsOptions = {
-    origin: 'https://nenoflux-assignment.netlify.app/',
+    origin: 'https://nenoflux-assignment.netlify.app',
     credentials: true,
     optionsSuccessStatus: 204
 }
