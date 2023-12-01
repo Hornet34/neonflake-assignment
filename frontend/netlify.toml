@@ -2,3 +2,12 @@
 from = "/*"
 to = "/index.html"
 status = 200
+
+[build]
+  base = "frontend"
+
+[build]
+  publish = "frontend/build"  # Adjust this path based on your frontend build output
+
+[build]
+  pretty_urls = false
