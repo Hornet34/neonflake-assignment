@@ -6,15 +6,18 @@ import './posts-route-styles.scss';
 const Posts = () => {
     const baseURL = process.env.REACT_APP_BACKEND_URL;
     const [postsData, setPostsData] = useState([]);
+    const [loading, isLoading] = useState(true)
     const navigate = useNavigate();
 
     const getPosts = async () => {
         try {
             const response = await axios.get(`${baseURL}/post`);
             setPostsData(response.data)
+            if (response.data.length === 0) isLoading(false);
         }
         catch (e) {
-            console.log('error', e)
+            console.log('error here', e);
+            isLoading(false);
         }
     }
     useEffect(() => { getPosts() });
@@ -36,7 +39,10 @@ const Posts = () => {
         <div>
             <p className="posts-page-headline row m-0 justify-content-center mt-3"> Posts</p>
             <div className="row m-0 justify-content-center mt-3">
-                {postsElements}
+                {postsData.length === 0 && loading ? (<div class="spinner-border text-primary" style={{ width: '3rem', height: '3rem' }} role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>) : (!loading ? (<div className='col-12 text-center mt-2 fail'>Failed To Get Posts</div>) : postsElements)}
+
             </div>
         </div>
     )

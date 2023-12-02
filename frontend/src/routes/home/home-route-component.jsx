@@ -199,7 +199,7 @@ const Home = () => {
                     <div className='col-12 text-center mt-2 success'>Post Submitted Successfully</div>
                 )}
                 {showFailedMsg && (
-                    <div className='col-12 text-center mt-2 error'>Post Submission Failed</div>
+                    <div className='col-12 text-center mt-2 fail'>Post Submission Failed</div>
                 )}
 
 

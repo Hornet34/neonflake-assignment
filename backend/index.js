@@ -22,9 +22,8 @@ db.once("open", () => {
 });
 
 
-
 const corsOptions = {
-    origin: 'https://nenoflux-assignment.netlify.app',
+    origin: process.env.FRONTEND_URL,
     credentials: true,
     optionsSuccessStatus: 204
 }
